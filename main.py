@@ -17,8 +17,9 @@ from PIL import Image # opens and reads uploaded images
 from openai import OpenAI
 from dotenv import load_dotenv
 
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# load_dotenv()
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+api_key = st.secrets["OPENAI_API_KEY"]
 
 # Loads the MobileNetV2 neural network
 def load_model():
