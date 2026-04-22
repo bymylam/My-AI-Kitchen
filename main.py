@@ -49,7 +49,7 @@ def classify_image(model, image):
 # Make a recipe
 def get_recipe(food_name):
     try:
-        client = OpenAI(api_key=OPENAI_API_KEY)
+        client = OpenAI(api_key=api_key)
 
         prompt = f"""
         The detected food is: {food_name}.
