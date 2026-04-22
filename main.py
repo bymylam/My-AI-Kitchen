@@ -1,6 +1,6 @@
 # Packages: streamlit, tensorflow, opencv-python, openai, python-dotenv, pillow
 
-import cv2 # used for image resizing and basic image processing
+# import cv2 # used for image resizing and basic image processing
 import numpy as np # helps handle images as arrays (matrices of numbers)
 import streamlit as st # builds the web app interface
 import os
@@ -27,11 +27,18 @@ def load_model():
     return model
 
 # Prepares the image so that AI model can understand it
+# def preprocess_image(image):
+#     img = np.array(image) # converts image into numbers (pixels)
+#     img = cv2.resize(img, (224, 224)) # resizes image to 224x224 (required by MobileNetV2)
+#     img = preprocess_input(img) # normalizes pixel values (important for AI accuracy)
+#     img = np.expand_dims(img, axis=0) # adds batch dimension
+#     return img
 def preprocess_image(image):
-    img = np.array(image) # converts image into numbers (pixels)
-    img = cv2.resize(img, (224, 224)) # resizes image to 224x224 (required by MobileNetV2)
-    img = preprocess_input(img) # normalizes pixel values (important for AI accuracy)
-    img = np.expand_dims(img, axis=0) # adds batch dimension
+    img = image.convert("RGB")
+    img = img.resize((224, 224))
+    img = np.array(img)
+    img = preprocess_input(img)
+    img = np.expand_dims(img, axis=0)
     return img
 
 # Makes predictions using the model
