@@ -88,7 +88,7 @@ def main():
     
     # UI Text
     st.write("By My Lam 👩🏻‍💻")
-    st.title("Tell me what do you want to eat today? 🌮")
+    st.title("What would you like to eat today? 🌮")
     st.write("Upload an image or type the food to get the recipe! 🥖")
     
     # Saves model in memory so it does not reload every time -> Makes app faster
