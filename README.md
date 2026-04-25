@@ -1,6 +1,9 @@
 # 🌮 My AI Kitchen
 
 An AI-powered web app that identifies food from images or text and generates recipes instantly using deep learning and OpenAI.
+<p align="center">
+  <img src="assets/screenshot.png" width="600"/>
+</p>
 
 ---
 
