@@ -65,7 +65,7 @@ MyAIKitchen/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/MyAIKitchen.git
+git clone https://github.com/bymylam/MyAIKitchen.git
 cd MyAIKitchen
 ```
 
